@@ -1,0 +1,8 @@
+<seelog>
+  <outputs formatid="main">
+    <console />
+  </outputs>
+  <formats>
+    <format id="main" format="%Date %Time [%Lev] %Msg%n"/>
+  </formats>
+</seelog>

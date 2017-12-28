@@ -1,0 +1,14 @@
+aws:
+  iot:
+    endpoint: wss://acbdefg0123456789.iot.ap-northeast-1.amazonaws.com/mqtt
+    region: ap-northeast-1
+    service-name: iotdevicegateway
+    mqtt:
+      singed-request-expires: 180
+      client-id: naruko
+
+monostick:
+  device: /dev/tty.usbserial-MWM9S1D
+  baud: 115200
+  read-timeout: 5
+

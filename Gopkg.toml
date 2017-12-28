@@ -1,0 +1,19 @@
+[[constraint]]
+  name = "github.com/tarm/serial"
+  revision = "794054cb266296569307c08d1b475f44505dfab1"
+
+[[constraint]]
+  name = "github.com/aws/aws-sdk-go"
+  version = "1.12.45"
+
+[[constraint]]
+  name = "github.com/eclipse/paho.mqtt.golang"
+  version = "1.1.0"
+
+[[constraint]]
+  name = "github.com/spf13/viper"
+  version = "1.0.0"
+
+[[constraint]]
+  name = "github.com/cihub/seelog"
+  version = "2.6"
