@@ -36,7 +36,7 @@ type ShadowReport struct {
 }
 
 const (
-	dateFormat = "2006/1/2 15:04:05"
+	dateFormat = "2006-01-02 15:04:05.000"
 )
 
 var client mqtt.Client
