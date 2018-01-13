@@ -158,7 +158,7 @@ func parsePacket(packet string) (*Acceleration, error) {
 		return nil, fmt.Errorf("Invalid z . %s", wk)
 	}
 	a := &Acceleration{
-		Timestamp:          time.Now(),
+		Timestamp:          time.Now().UTC(),
 		Lqi:                uint8(lqi),
 		ChildID:            childID,
 		PowerSupplyVoltage: uint16(powerSupplyVoltage),
