@@ -9,7 +9,7 @@ import (
 
 	log "github.com/cihub/seelog"
 
-	"github.com/nijohando/naruko/config"
+	"github.com/nijohando/naruko/naruko-mqtt-publisher/config"
 	"github.com/spf13/viper"
 	"github.com/tarm/serial"
 )

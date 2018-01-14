@@ -85,7 +85,7 @@ func resourceAssetGo() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "resource/asset.go", size: 0, mode: os.FileMode(420), modTime: time.Unix(1516909201, 0)}
+	info := bindataFileInfo{name: "resource/asset.go", size: 0, mode: os.FileMode(420), modTime: time.Unix(1516825860, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -105,7 +105,7 @@ func resourceConfigYml() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "resource/config.yml", size: 301, mode: os.FileMode(420), modTime: time.Unix(1516830619, 0)}
+	info := bindataFileInfo{name: "resource/config.yml", size: 301, mode: os.FileMode(420), modTime: time.Unix(1515898727, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -125,7 +125,7 @@ func resourceSeelogXml() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "resource/seelog.xml", size: 160, mode: os.FileMode(420), modTime: time.Unix(1516830619, 0)}
+	info := bindataFileInfo{name: "resource/seelog.xml", size: 160, mode: os.FileMode(420), modTime: time.Unix(1515898727, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }

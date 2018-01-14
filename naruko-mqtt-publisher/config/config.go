@@ -4,7 +4,7 @@ import (
 	"bytes"
 
 	log "github.com/cihub/seelog"
-	"github.com/nijohando/naruko/resource"
+	"github.com/nijohando/naruko/naruko-mqtt-publisher/resource"
 	"github.com/spf13/viper"
 )
 
