@@ -26,13 +26,13 @@ type ShadowState struct {
 
 // ShadowReport represents json data structure for reported node
 type ShadowReport struct {
-	Timestamp          string
-	Lqi                uint8
-	PowerSupplyVoltage uint16
-	SensorMode         uint16
-	X                  int16
-	Y                  int16
-	Z                  int16
+	Timestamp          string `json:"publishedAt"`
+	Lqi                uint8  `json:"lqi"`
+	PowerSupplyVoltage uint16 `json:"powerSupplyVoltage"`
+	SensorMode         uint16 `json:"sensorMode"`
+	X                  int16  `json:"x"`
+	Y                  int16  `json:"y"`
+	Z                  int16  `json:"z"`
 }
 
 const (
@@ -72,10 +72,15 @@ func newMQTTClient() (mqtt.Client, error) {
 	opts.SetAutoReconnect(false)
 	opts.SetConnectionLostHandler(func(_ mqtt.Client, err error) {
 		log.Warnf("Connection is lost. (Reason: %q)\n", err)
-		log.Info("Reconnecting...")
-		err = initClient()
-		if err != nil {
-			panic(err)
+		for i := 0; i < 30; i++ {
+			log.Infof("Reconnecting(%d)...", i)
+			err = initClient()
+			if err == nil {
+				break
+			}
+			d := time.Duration(i * i * 10)
+			log.Warnf("Failed to reconnect. wait %d seconds", d)
+			time.Sleep(time.Duration(i*i*10) * time.Second)
 		}
 	})
 	return mqtt.NewClient(opts), nil
